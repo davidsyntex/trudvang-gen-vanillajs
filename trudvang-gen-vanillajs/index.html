@@ -10,14 +10,21 @@
 <body>
     <nav class="navigation">
         <h1>Trudvang Gen Vanilla JS</h1>
+        <div class="button-group">
+            <div id="people-btn" class="button">People</div>
+        </div>
     </nav>
 
-    <div class="button-group">
-        <div id="mittlander-btn" class="button">Mittlander</div>
-        <div id="stormlander-btn" class="button">Stormlander</div>
-        <div id="sdf" class="button">Sto rml ander</div>
-        <div id="btn" class="button"> der</div>
-        <div id="-btn" class="button">Sto rmlander</div>
+
+
+    <div id="buttonDom" class="button-group-small">
+        <div class="button" data-list="people.mittlander" data-gender="both">Mittlander</div>
+        <div class="button" data-list="people.stormlander" data-gender="both">Stormlander</div>
+        <div class="button" data-list="people.virann" data-gender="both">Viranns</div>
+        <div class="button" data-list="people.dwarf" data-gender="male">Dwarf</div>
+        <div class="button" data-list="people.elf" data-gender="both">Elf</div>
+        <div class="button" data-list="people.wildfolk" data-gender="both">Wildfolk</div>
+        <div class="button" data-list="people.troll" data-gender="none">Troll</div>
     </div>
     <div class="container">
         <div class="name-result-box">
@@ -33,5 +40,6 @@
     </div>
 
     <script src="app/app.js" type="text/javascript"></script>
+    <script src="data/nameList.people.js" type="text/javascript"></script>
 </body>
 </html>

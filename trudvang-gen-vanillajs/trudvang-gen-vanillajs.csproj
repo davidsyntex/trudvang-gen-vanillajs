@@ -69,6 +69,7 @@
     <Content Include="app\app.js" />
     <Content Include="Content\app.css" />
     <Content Include="Content\normalize.css" />
+    <Content Include="data\nameList.people.js" />
     <Content Include="index.html" />
     <Content Include="libs\syradar.js" />
     <Content Include="packages.config" />
