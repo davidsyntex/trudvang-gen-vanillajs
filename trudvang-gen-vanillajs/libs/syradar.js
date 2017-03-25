@@ -36,15 +36,39 @@ class Syradar {
             htmlElement.removeChild(htmlElement.firstChild);
         }
     }
+    /**
+     * Creates an element with a Text, Id and Class
+     * @param {string} tagName
+     * @param {string} textContent
+     * @param {string} tagId
+     * @param {string} tagClass
+     * @return {HTMLElement} item
+     */
+    create(tagName, textContent, tagId, tagClass) {
+        const item = document.createElement(tagName);
+        if(tagId !== ''){
+            item.setAttribute('id', tagId);
+        }
+        if(tagClass !== ''){
+            item.setAttribute('class', tagClass);
+        }
+        const itemText = document.createTextNode(textContent);
+        item.appendChild(itemText);
+        return item;
+    }
 
     /**
      * Creates an element with a Text and appends it to an element
-     * @param {string} tagName 
-     * @param {string} textContent 
-     * @param {HTMLElement} appendTo 
+     * @param {string} tagName
+     * @param {string} textContent
+     * @param {HTMLElement} appendTo
+     * @param {string} id
      */
-    create(tagName, textContent, appendTo) {
+    createAndAdd(tagName, textContent, appendTo, id) {
         const item = document.createElement(tagName);
+        if(id !== ''){
+            item.setAttribute('id', id);
+        }
         const itemText = document.createTextNode(textContent);
         item.appendChild(itemText);
         appendTo.appendChild(item);
